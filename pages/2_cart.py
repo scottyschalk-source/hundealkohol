@@ -113,3 +113,18 @@ elif rabatq == "charly20" and st.session_state.total > 70:
     st.write(f"Sie zahlen {round(st.session_state.totalnew, 2)}€")
 else:
     st.write(f"Sie zahlen {st.session_state.total}€")
+
+
+
+
+#xlsm buton
+relativer_pfad = os.path.join("media", "rabat_code_calc.xlsm")
+with open(relativer_pfad, "rb") as file:
+    excel_daten = file.read()
+
+st.download_button(
+    label=" Excel-Mappe (.xlsm) herunterladen",
+    data=excel_daten,
+    file_name="heruntergeladene_datei.xlsm",
+    mime="application/vnd.ms-excel.sheet.macroEnabled.12"
+    )
