@@ -1,4 +1,14 @@
 import streamlit as st
+if "product1" not in st.session_state:
+    st.session_state["product1"] = 0
+if "product2" not in st.session_state:
+    st.session_state["product2"] = 0
+if "product3" not in st.session_state:
+    st.session_state["product3"] = 0
+if "product4" not in st.session_state:
+    st.session_state["product4"] = 0
+if "product5" not in st.session_state:
+    st.session_state["product5"] = 0
 
 # Shop-Überschrift (Gibt der Seite einen klaren E-Commerce-Vibe)
 st.title("🛍️ Unser Hardware & Tech Shop")
